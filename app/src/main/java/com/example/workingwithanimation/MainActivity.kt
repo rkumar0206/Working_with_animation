@@ -176,6 +176,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 container.removeView(newStar)
             }
         })
+
+        set.start()
     }
 
 
