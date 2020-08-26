@@ -41,12 +41,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/showerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/skyColorBtn"
+        app:layout_constraintTop_toBottomOf="@+id/scaleBtn" />
+
+    <Button
         android:id="@+id/fadeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Fade"
-        app:layout_constraintEnd_toStartOf="@+id/showerBtn"
+        app:layout_constraintEnd_toStartOf="@+id/skyColorBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rotateBtn" />
@@ -55,31 +64,32 @@
         android:id="@+id/skyColorBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Sky Color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/showerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/translateBtn" />
-
-    <Button
-        android:id="@+id/showerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="shower"
-        app:layout_constraintEnd_toStartOf="@+id/skyColorBtn"
+        app:layout_constraintEnd_toStartOf="@+id/showerBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fadeBtn"
-        app:layout_constraintTop_toBottomOf="@+id/scaleBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/translateBtn" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showerBtn"
-        app:srcCompat="@drawable/ic_baseline_star_24" />
+        app:layout_constraintTop_toBottomOf="@+id/skyColorBtn">
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_star_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
